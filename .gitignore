@@ -1,3 +1,7 @@
+# ByteGames
+*.DS_Store
+
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -13,6 +17,7 @@ ExportedObj/
 .consulo/
 *.csproj
 *.unityproj
+*.meta
 *.sln
 *.suo
 *.tmp
@@ -32,3 +37,23 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+### MonoDevelop ###
+#User Specific
+*.usertasks
+
+#Mono Project Files
+*.resources
+test-results/
+
+
+# Local plugins
+Assets/Local/
+Assets/Local.meta
+
+# Visual Studio 2015 cache/options directory
+.vs/
