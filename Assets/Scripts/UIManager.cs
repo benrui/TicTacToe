@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Premium Buttons")]
     
-    public GameObject shareBtn;
+	public GameObject shareBtn;
 
     Animator scoreAnimator;
     bool hasCheckedGameOver = false;
@@ -57,7 +57,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // update is called once per frame
     void Update()
     {
         score.text = ScoreManager.Instance.Score.ToString();
