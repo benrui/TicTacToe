@@ -13,10 +13,8 @@ public interface IGameState {
 
 
 public enum GameStates {
-    WaitingInLobby,
-    SearchingOpponent,
+    Lobby,
     Playing,
-    EndGame,
     None
 }
 
@@ -39,7 +37,7 @@ public class GameStateManager : IInitializable, ITickable, IFixedTickable {
         Assert.IsEqual(currentState, GameStates.None);
         Assert.IsNull(currentStateHandler);
 
-        ChangeState(GameStates.WaitingInLobby);
+        ChangeState(GameStates.Lobby);
     }
 
     public void ChangeState(GameStates state) {

@@ -5,14 +5,24 @@ using Zenject;
 
 public class GuiHandler : MonoBehaviour {
     private GameStateManager stateManager;
+    private IPopupManager popupManager;
+    private INetworkService networkService;
 
     [Inject]
-    public void Construct(GameStateManager stateManager)
+    public void Construct(
+        GameStateManager stateManager,
+        IPopupManager popupManager,
+        INetworkService networkService
+    )
     {
         this.stateManager = stateManager;
+        this.popupManager = popupManager;
+        this.networkService = networkService;
     }
 
     public void StartNewGame() {
-        stateManager.ChangeState(GameStates.Playing);
+        Debug.Log("Trying to find new opponent");
+        popupManager.Show(PopupType.SearchOpponent);
+        networkService.FindOpponent();
     }
 }
