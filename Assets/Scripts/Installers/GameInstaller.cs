@@ -6,7 +6,18 @@ public class GameInstaller : MonoInstaller<GameInstaller> {
     private Settings settings = null;
 
     public override void InstallBindings() {
-        Debug.Log("Hello World from Zenject!");
+        InstallController();
+        InstallStates();
+
+    }
+
+    void InstallController() {
+        Container.BindInterfacesAndSelfTo<GameController>().AsSingle();
+    }
+
+    void InstallStates() {
+        Container.BindInterfacesAndSelfTo<GameStateManager>().AsSingle();
+        Container.Bind<LobbyState>().AsSingle();
     }
 
     [System.Serializable]
