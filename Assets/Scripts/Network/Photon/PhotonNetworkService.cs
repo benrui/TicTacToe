@@ -4,7 +4,7 @@ using UnityEngine;
 public class PhotonNetworkService : AbstractNetworkService {
     
     public PhotonNetworkService() {
-        Debug.Log("connecting to server!");
+        Debug.Log("it will connect to server!");
     }
 
     protected override void connectService() {
@@ -30,4 +30,5 @@ public class PhotonNetworkService : AbstractNetworkService {
 
         Debug.Log("Move sending to opponent!");
     }
+
 }
