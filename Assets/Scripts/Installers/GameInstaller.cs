@@ -5,17 +5,18 @@ public class GameInstaller : MonoInstaller<GameInstaller> {
     [Inject]
     private Settings settings = null;
 
+
     public override void InstallBindings() {
         
         Container.BindInterfacesAndSelfTo<GameController>().AsSingle();
-        Container.BindInterfacesTo<PopupManager>().AsSingle();
+        Container.BindInterfacesAndSelfTo<PopupManager>().AsSingle();
 
-        #if UNITY_EDITOR
-        Container.BindInterfacesTo<DummyPhotonService>().AsSingle();
-        #elif
-        Container.BindInterfacesTo<PhotonNetworkService>().AsSingle();
-        #endif
-     
+        if (settings.UseRealService) {
+            Container.BindInterfacesTo<PhotonNetworkService>().AsSingle();
+        } else {
+            Container.BindInterfacesTo<DummyPhotonService>().AsSingle();
+        }
+
         InstallStates();
 
     }
@@ -27,6 +28,6 @@ public class GameInstaller : MonoInstaller<GameInstaller> {
 
     [System.Serializable]
     public class Settings {
-        //
+        public bool UseRealService;
     }
 }
