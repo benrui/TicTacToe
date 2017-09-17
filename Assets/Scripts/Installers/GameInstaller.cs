@@ -1,13 +1,11 @@
-using UnityEngine;
+using System;
 using Zenject;
 
 public class GameInstaller : MonoInstaller<GameInstaller> {
-    [Inject]
-    private Settings settings = null;
+    [Inject] private Settings settings = null;
 
 
     public override void InstallBindings() {
-        
         Container.BindInterfacesAndSelfTo<GameController>().AsSingle();
         Container.BindInterfacesAndSelfTo<PopupManager>().AsSingle();
 
@@ -18,15 +16,21 @@ public class GameInstaller : MonoInstaller<GameInstaller> {
         }
 
         InstallStates();
-
+        DeclareSignals();
     }
 
-    void InstallStates() {
+    private void InstallStates() {
         Container.BindInterfacesAndSelfTo<GameStateManager>().AsSingle();
         Container.Bind<LobbyState>().AsSingle();
+        Container.Bind<PlayingState>().AsSingle();
     }
 
-    [System.Serializable]
+    private void DeclareSignals() {
+        Container.DeclareSignal<StartGameSignal>();
+    }
+
+
+    [Serializable]
     public class Settings {
         public bool UseRealService;
     }
