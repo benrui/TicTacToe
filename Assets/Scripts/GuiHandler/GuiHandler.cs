@@ -1,9 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 public class GuiHandler : MonoBehaviour {
+    public GameObject Lobby;
+    public GameObject GameGrid;
+    
     private GameStateManager stateManager;
     private IPopupManager popupManager;
     private INetworkService networkService;
@@ -12,12 +13,19 @@ public class GuiHandler : MonoBehaviour {
     public void Construct(
         GameStateManager stateManager,
         IPopupManager popupManager,
-        INetworkService networkService
+        INetworkService networkService,
+        StartGameSignal startGameSignal
     )
     {
         this.stateManager = stateManager;
         this.popupManager = popupManager;
         this.networkService = networkService;
+        startGameSignal += OnStartGame;
+    }
+
+    private void OnStartGame(Opponent obj) {
+        Lobby.SetActive(false);
+        GameGrid.SetActive(true);
     }
 
     public void StartNewGame() {
