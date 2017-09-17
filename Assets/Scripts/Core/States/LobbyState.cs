@@ -1,14 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class LobbyState : IGameState {
     private readonly GameStateManager stateManager;
+    private readonly Settings settings;
 
     public LobbyState(
-        GameStateManager stateManager
+        GameStateManager stateManager,
+        Settings settings
     ) {
         this.stateManager = stateManager;
+        this.settings = settings;
     }
 
     public void EnterState() {
@@ -25,5 +27,10 @@ public class LobbyState : IGameState {
 
     public void FixedUpdate() {
         /*throw new System.NotImplementedException();*/
+    }
+    
+    [Serializable]
+    public class Settings {
+        public GameObject Lobby;
     }
 }

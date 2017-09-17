@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Zenject;
+﻿using System.Collections.Generic;
 using ModestTree;
+using Zenject;
 
 public interface IGameState {
     void EnterState();
@@ -26,10 +24,12 @@ public class GameStateManager : IInitializable, ITickable, IFixedTickable {
 
     [Inject]
     public void Construct(
-        LobbyState lobbyState
+        LobbyState lobbyState,
+        PlayingState playingState
     ) {
         states = new List<IGameState>() {
-            lobbyState
+            lobbyState,
+            playingState
         };
     }
 
