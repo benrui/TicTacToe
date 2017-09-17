@@ -11,10 +11,6 @@ public abstract class AbstractNetworkService : INetworkService {
 
     private NetworkStatus status = NetworkStatus.Disconnected;
 
-    public AbstractNetworkService() {
-        connectService();
-    }
-
     protected abstract void connectService();
 
     #region INetworkService implementation

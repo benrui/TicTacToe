@@ -1,10 +1,15 @@
 ﻿using System;
 using UnityEngine;
+using Zenject;
 
-public class PhotonNetworkService : AbstractNetworkService {
+public class PhotonNetworkService : AbstractNetworkService, IInitializable {
     
     public PhotonNetworkService() {
         Debug.Log("it will connect to server!");
+    }
+
+    public void Initialize() {
+        connectService();
     }
 
     protected override void connectService() {
@@ -30,5 +35,4 @@ public class PhotonNetworkService : AbstractNetworkService {
 
         Debug.Log("Move sending to opponent!");
     }
-
 }

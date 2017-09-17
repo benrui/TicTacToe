@@ -1,6 +1,4 @@
-﻿using System;
-
-public interface INetworkService {
+﻿public interface INetworkService {
     NetworkStatus Status{ get; }
     void FindOpponent();
     void MakeMove();
