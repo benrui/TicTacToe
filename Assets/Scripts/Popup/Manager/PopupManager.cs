@@ -1,16 +1,11 @@
 ﻿using System;
-using UnityEngine;
-
 
 public class PopupManager : IPopupManager {
-    private Settings settings;
-    private PopupLayerFacade popupLayerFacade;
+    private readonly PopupLayerFacade popupLayerFacade;
 
     public PopupManager(
-        Settings settings,
         PopupLayerFacade popupLayerFacade
     ) {
-        this.settings = settings;
         this.popupLayerFacade = popupLayerFacade;
     }
 
@@ -24,12 +19,9 @@ public class PopupManager : IPopupManager {
         popupLayerFacade.Hide(type);
     }
 
-    #endregion
-
-
-
-    [System.Serializable]
-    public class Settings {
-        //
+    public void CloseActivePopup() {
+        popupLayerFacade.CloseActivePopup();
     }
+
+    #endregion
 }

@@ -1,8 +1,6 @@
-﻿using System;
-using Zenject;
-using UnityEngine;
+﻿using UnityEngine;
 
-public delegate void CloseDelegate(PopupType type);
+public delegate void CloseDelegate();
 
 public class PopupBase : MonoBehaviour, IPopup {
     public PopupType Type;
@@ -11,6 +9,6 @@ public class PopupBase : MonoBehaviour, IPopup {
 
 
     public void CloseClick() {
-        InternalCloseDelegate(this.Type);
+        InternalCloseDelegate();
     }
 }
