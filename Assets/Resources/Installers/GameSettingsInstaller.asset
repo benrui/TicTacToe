@@ -13,10 +13,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameInstaller:
     UseRealService: 0
-  PopupManagerSettings:
-    PopupLayer: {fileID: 224060193384702274, guid: efcd8466f66d84434b93b5a709d13f7a,
-      type: 2}
-    PopupOverlay: {fileID: 224491092441511062, guid: efcd8466f66d84434b93b5a709d13f7a,
-      type: 2}
-    SearchingPopup: {fileID: 1507686128904226, guid: 8bda5395a77e8480f9dcda6c23721239,
-      type: 2}

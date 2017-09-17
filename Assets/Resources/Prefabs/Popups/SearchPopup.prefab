@@ -73,7 +73,8 @@ GameObject:
   - component: {fileID: 224724892231117124}
   - component: {fileID: 222850013221619648}
   - component: {fileID: 114467482173397760}
-  - component: {fileID: 114705386485789782}
+  - component: {fileID: 114870512617473588}
+  - component: {fileID: 114722670981062336}
   m_Layer: 5
   m_Name: SearchPopup
   m_TagString: Untagged
@@ -201,7 +202,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Searching ...
---- !u!114 &114705386485789782
+--- !u!114 &114722670981062336
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -209,7 +210,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1507686128904226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc97482a1519487e92e3754811b8536, type: 3}
+  m_Script: {fileID: 11500000, guid: 0166d8ff8d905b048b2448179e1f5d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 114870512617473588}
+  _identifier: 
+  _context: {fileID: 0}
+  _bindType: 0
+--- !u!114 &114870512617473588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1507686128904226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd4ce8afcf1341409df062210602b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
@@ -252,7 +269,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114705386485789782}
+      - m_Target: {fileID: 0}
         m_MethodName: CloseClick
         m_Mode: 1
         m_Arguments:
