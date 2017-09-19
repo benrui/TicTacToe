@@ -1,5 +1,8 @@
 # ByteGames
 *.DS_Store
+/Assets/Plugins/Editor.meta
+/Assets/Plugins/Editor/JetBrains
+/Assets/Plugins/Editor/JetBrains.meta
 
 
 /[Ll]ibrary/

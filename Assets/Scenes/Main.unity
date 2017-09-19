@@ -1485,6 +1485,7 @@ MonoBehaviour:
   - {fileID: 1835264684}
   _installerPrefabs: []
   _scriptableObjectInstallers: []
+  _autoRun: 1
   _kernel: {fileID: 0}
 --- !u!1 &1293373034
 GameObject:
@@ -2414,10 +2415,11 @@ MonoBehaviour:
   _installerPrefabs: []
   _scriptableObjectInstallers:
   - {fileID: 11400000, guid: 380dbb8fe8bfb40fbb49905f230b9a45, type: 2}
+  _autoRun: 1
   _parentNewObjectsUnderRoot: 0
   _contractNames: []
   _parentContractName: 
-  _autoRun: 1
+  _parentContractNames: []
 --- !u!4 &2050576286
 Transform:
   m_ObjectHideFlags: 0
