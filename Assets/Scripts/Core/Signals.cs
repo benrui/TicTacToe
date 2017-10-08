@@ -1,4 +1,4 @@
 ﻿using Zenject;
 
-public class StartGameSignal : Signal<Opponent, StartGameSignal> {
+public class StartGameSignal : Signal<StartGameSignal, Opponent> {
 }
