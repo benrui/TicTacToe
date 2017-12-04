@@ -1,3 +1,4 @@
 ﻿public enum PopupType {
-    SearchOpponent
+    SearchOpponent,
+    Settings
 }

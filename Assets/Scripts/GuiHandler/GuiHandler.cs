@@ -35,5 +35,6 @@ public class GuiHandler : MonoBehaviour {
 
     public void ShowSettingsPopup() {
         Debug.Log("Show Settings Popup");
+        popupManager.Show(PopupType.Settings);
     }
 }

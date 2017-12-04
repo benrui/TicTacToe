@@ -1483,7 +1483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6797886c294147af8928e35d483eea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SearchingPopup: {fileID: 224724892231117124, guid: 8bda5395a77e8480f9dcda6c23721239,
+  SearchingPopupTransform: {fileID: 224724892231117124, guid: 8bda5395a77e8480f9dcda6c23721239,
+    type: 2}
+  SettingsPopupTransform: {fileID: 224724892231117124, guid: 4850ecd6ad640476ba960147bad21435,
     type: 2}
 --- !u!114 &1285548255
 MonoBehaviour:

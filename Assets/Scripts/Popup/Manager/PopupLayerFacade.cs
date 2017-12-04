@@ -8,7 +8,8 @@ public class PopupLayerFacade : MonoBehaviour {
     private Dictionary<PopupType, PopupBase> popupDictionary;
     private PopupBase activePopup;
 
-    public Transform SearchingPopup;
+    public Transform SearchingPopupTransform;
+    public Transform SettingsPopupTransform;
 
 
     [Inject]
@@ -43,7 +44,10 @@ public class PopupLayerFacade : MonoBehaviour {
         Transform popup;
         switch (type) {
             case PopupType.SearchOpponent:
-                popup = Instantiate(SearchingPopup, transform);
+                popup = Instantiate(SearchingPopupTransform, transform);
+                break;
+            case PopupType.Settings:
+                popup = Instantiate(SettingsPopupTransform, transform);
                 break;
             default:
                 throw new Exception("Invalid Popup Type");
